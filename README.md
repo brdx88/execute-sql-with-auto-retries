@@ -1,4 +1,4 @@
-# Retryable Database Query Execution in Python 🔄
+# Retryable SQL Query Execution in Python 🔄
 
 ## Overview
 This Python script is designed to execute SQL queries with an automated retry mechanism, ensuring reliable database interaction even when encountering operational errors. If an error occurs, the script will retry the query multiple times until either it succeeds or reaches a defined retry limit.
@@ -6,10 +6,10 @@ This Python script is designed to execute SQL queries with an automated retry me
 This approach is helpful in scenarios where database connectivity might be unstable, ensuring your queries are executed without manual intervention.
 
 ## Features
-- Automatic Retry Handling: If a query fails due to an operational error, the script retries it up to 500 times (configurable).
-- Customizable Retry Limit: Set a custom retry limit based on your requirements.
-- Time-Stamped Logs: Detailed logs for both successful and failed attempts, complete with timestamps.
-- Error Handling: Robust exception handling for operational errors encountered during query execution.
+- **Automatic Retry Handling**: If a query fails due to an operational error, the script retries it up to 500 times (configurable).
+- **Customizable Retry Limit**: Set a custom retry limit based on your requirements.
+- **Time-Stamped Logs**: Detailed logs for both successful and failed attempts, complete with timestamps.
+- **Error Handling**: Robust exception handling for operational errors encountered during query execution.
 
 ## Installation & Usage
 1. Clone this repository:
@@ -19,12 +19,17 @@ git clone https://github.com/brdx88/execute-sql-with-auto-retries.git
 
 2. Install the required packages:
 ```bash
-git clone https://github.com/brdx88/execute-sql-with-auto-retries.git
+pip install impyla
 ```
 
 3. Sample usage:
 ```python
-from your_module import execute_query
+from impala.dbapi import connect, OperationalError
+from impala.util import as_pandas
+import datetime
+import pytz
+jakarta_tz = pytz.timezone('Asia/Jakarta')
+
 execute_query(cursor, "SELECT * FROM your_table")
 ```
 
