@@ -33,6 +33,9 @@ bayangin di sql editor, kudu ctrl + enter selalu.
     import datetime
     import pytz
     jakarta_tz = pytz.timezone('Asia/Jakarta')
+
+    conn = connect(host='your.big.data.address.com', port=8888, auth_mechanism='GSSAPI', use_ssl=False, kerberos_service_name='impala')
+    cursor = conn.cursor()
     
     execute_query(cursor, "SELECT * FROM your_table")
     ```
