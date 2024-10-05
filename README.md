@@ -5,6 +5,10 @@ This Python script is designed to execute SQL queries with an automated retry me
 
 This approach is helpful in scenarios where database connectivity might be unstable, ensuring your queries are executed without manual intervention.
 
+## Problems
+bayangin di sql editor, kudu ctrl + enter selalu.
+..kasih gambar errornya..
+
 ## Features
 - **Automatic Retry Handling**: If a query fails due to an operational error, the script retries it up to 500 times (configurable).
 - **Customizable Retry Limit**: Set a custom retry limit based on your requirements.
@@ -13,25 +17,25 @@ This approach is helpful in scenarios where database connectivity might be unsta
 
 ## Installation & Usage
 1. Clone this repository:
-```bash
-git clone https://github.com/brdx88/execute-sql-with-auto-retries.git
-```
+    ```bash
+    git clone https://github.com/brdx88/execute-sql-with-auto-retries.git
+    ```
 
 2. Install the required packages:
-```bash
-pip install impyla
-```
+    ```bash
+    pip install impyla
+    ```
 
 3. Sample usage:
-```python
-from impala.dbapi import connect, OperationalError
-from impala.util import as_pandas
-import datetime
-import pytz
-jakarta_tz = pytz.timezone('Asia/Jakarta')
-
-execute_query(cursor, "SELECT * FROM your_table")
-```
+    ```python
+    from impala.dbapi import connect, OperationalError
+    from impala.util import as_pandas
+    import datetime
+    import pytz
+    jakarta_tz = pytz.timezone('Asia/Jakarta')
+    
+    execute_query(cursor, "SELECT * FROM your_table")
+    ```
 
 ## Code Explanation
 ```python
