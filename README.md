@@ -6,7 +6,7 @@ This Python script is designed to execute SQL queries with an automated retry me
 This approach is helpful in scenarios where database connectivity might be unstable, ensuring your queries are executed without manual intervention.
 
 ## Problems
-When running SQL queries through Hue for Impala or Hive, encountering errors is a common frustration. Each time a query fails, I would need to manually hit the 'run' button or press Ctrl + Enter repeatedly, hoping the query would eventually succeed. 
+When running SQL queries through Hue for Impala or Hive, encountering errors is a common frustration. Each time a query fails, I would need to manually hit the 'run' button or press `Ctrl + Enter` repeatedly, hoping the query would eventually succeed. 
 
 This process ties me to the screen, forcing constant supervision. It's not only time-consuming but also mentally exhausting, as any moment away from the monitor could result in missed retries. 
 
