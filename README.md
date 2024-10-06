@@ -1,4 +1,5 @@
 # Auto-retry SQL Query Execution in Python 🔄
+![1](https://github.com/brdx88/execute-sql-with-auto-retries/blob/main/auto_retry_solved.jpg)
 
 ## Overview
 This Python script is designed to execute SQL queries with an automated retry mechanism, ensuring reliable database interaction even when encountering operational errors. If an error occurs, the script will retry the query multiple times until either it succeeds or reaches a defined retry limit.
@@ -6,6 +7,7 @@ This Python script is designed to execute SQL queries with an automated retry me
 This approach is helpful in scenarios where database connectivity might be unstable, ensuring your queries are executed without manual intervention.
 
 ## Problems
+![1](https://github.com/brdx88/execute-sql-with-auto-retries/blob/main/auto_retry_sql_error.png)
 When running SQL queries through Hue for Impala or Hive, encountering errors is a common frustration. Each time a query fails, I would need to manually hit the 'run' button or press `Ctrl + Enter` repeatedly, hoping the query would eventually succeed. 
 
 This process ties me to the screen, forcing constant supervision. It's not only time-consuming but also mentally exhausting, as any moment away from the monitor could result in missed retries. 
