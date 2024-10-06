@@ -1,4 +1,4 @@
-# Retryable SQL Query Execution in Python 🔄
+# Auto-retry SQL Query Execution in Python 🔄
 
 ## Overview
 This Python script is designed to execute SQL queries with an automated retry mechanism, ensuring reliable database interaction even when encountering operational errors. If an error occurs, the script will retry the query multiple times until either it succeeds or reaches a defined retry limit.
